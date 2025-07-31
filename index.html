@@ -6,7 +6,7 @@
     <title>Tresh Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="">
+  <body class="modern">
     <div class="container">
       <header id="header">
         <nav>
@@ -62,24 +62,19 @@
         <div class="hero">
           <div class="profile">
             <span class="profile-pics">
-              <img src="assets/tresh.png" alt="" />
+              <img src="assets/tresh.png" alt="" loading="lazy" />
             </span>
             <h2>
               Sanni Tomiwa
-              <!--<em><mark>TRESH</mark></em>-->
-              <span>Tresh <span>Tresh</span></span>
             </h2>
+            <p class="subtitle">Frontend Developer & Designer</p>
             <p class="desc">
-              web development | graphics designer | social media manager
+              I build beautiful and responsive websites that are a joy to use.
             </p>
-            <p class="desc" style="display: flex; align-items: center;justify-content: center;gap: .75rem;">
-              <a href="mailto:5liltresh@gmail.com">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7l8-5V6l-8 5l-8-5v2z"/></svg>
-              </a>
-              <a href="tel:+2349138289542">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M16.552 22.133c-1.44-.053-5.521-.617-9.795-4.89c-4.273-4.274-4.836-8.354-4.89-9.795c-.08-2.196 1.602-4.329 3.545-5.162a1.47 1.47 0 0 1 1.445.159c1.6 1.166 2.704 2.93 3.652 4.317a1.504 1.504 0 0 1-.256 1.986l-1.951 1.449a.48.48 0 0 0-.142.616c.442.803 1.228 1.999 2.128 2.899s2.153 1.738 3.012 2.23a.483.483 0 0 0 .644-.162l1.27-1.933a1.503 1.503 0 0 1 2.056-.332c1.407.974 3.049 2.059 4.251 3.598a1.47 1.47 0 0 1 .189 1.485c-.837 1.953-2.955 3.616-5.158 3.535"/></g></svg>
-              </a>
-            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="button">Contact Me</a>
+                <a href="#portfolio" class="button-secondary">See My Work</a>
+            </div>
           </div>
         </div>
       </header>
@@ -88,29 +83,31 @@
         <section id="about">
           <div class="section-header">
             <h3>about me</h3>
-            <em>
-              <p style="text-decoration: none; cursor: default">
-                Tresh Loves God
-              </p>
-            </em>
           </div>
 
           <div class="section-content">
-            <p>
-              Detail-oriented Frontend Web Developer with over 2.5 years of
-              experience building visually appealing and high-performance
-              websites. Skilled in React.js, Tailwind CSS, and modern UI
-              frameworks, with expertise in creating responsive and accessible
-              interfaces. While specializing in frontend development, I can also
-              use frameworks like Supabase for backend functionality and am
-              currently expanding my backend knowledge. Additionally, I am a
-              graphic designer with a strong eye for aesthetics and branding. I
-              have experience in UI prototyping and creating engaging visual
-              content. Passionate about problem-solving, continuous learning,
-              and delivering high-quality digital experiences.
-            </p>
-
-            <button class="button" id="popup-about">More Info</button>
+            <div class="about-image">
+                <img src="assets/tresh.png" alt="Sanni Tomiwa" loading="lazy">
+            </div>
+            <div class="about-text">
+              <p>
+                Detail-oriented Frontend Web Developer with over 2.5 years of
+                experience building visually appealing and high-performance
+                websites. Skilled in React.js, Tailwind CSS, and modern UI
+                frameworks, with expertise in creating responsive and accessible
+                interfaces.
+              </p>
+              <p>
+                While specializing in frontend development, I can also
+                use frameworks like Supabase for backend functionality and am
+                currently expanding my backend knowledge. Additionally, I am a
+                graphic designer with a strong eye for aesthetics and branding. I
+                have experience in UI prototyping and creating engaging visual
+                content. Passionate about problem-solving, continuous learning,
+                and delivering high-quality digital experiences.
+              </p>
+              <button class="button" id="popup-about">More Info</button>
+            </div>
           </div>
 
           <div class="popup none" id="about-popup">
@@ -127,9 +124,6 @@
         <section id="portfolio">
           <div class="section-header">
             <h3>portfolio</h3>
-            <em>
-              <p class="more" id="popup-portfolio">More Info</p>
-            </em>
           </div>
 
           <div class="section-content">
@@ -137,12 +131,10 @@
               <a href="https://solar-bright.vercel.app/" target="_blank">
                 <div class="project">
                   <figure>
-                    <img src="assets/solar-pro.png" alt="product-image" />
+                    <img src="assets/solar-pro.png" alt="product-image" loading="lazy" />
                     <figcaption>Solar Bright</figcaption>
                     <div class="desc">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Harum, sed ratione enim quo nesciunt saepe voluptatum
-                      exercitationem. Exercitationem, vitae mollitia.
+                      A website for a solar energy company.
                     </div>
                   </figure>
                 </div>
@@ -150,12 +142,10 @@
               <a href="https://traption.netlify.app" target="_blank">
                 <div class="project">
                   <figure>
-                    <img src="assets/dutwo-pro.png" alt="product-image" />
+                    <img src="assets/dutwo-pro.png" alt="product-image" loading="lazy" />
                     <figcaption>Traption Ai</figcaption>
                     <div class="desc">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Harum, sed ratione enim quo nesciunt saepe voluptatum
-                      exercitationem. Exercitationem, vitae mollitia.
+                      An AI-powered content generation platform.
                     </div>
                   </figure>
                 </div>
@@ -163,12 +153,10 @@
               <a href="https://shh-send.netlify.app" target="_blank">
                 <div class="project">
                   <figure>
-                    <img src="assets/samsung-pro.png" alt="product-image" />
+                    <img src="assets/samsung-pro.png" alt="product-image" loading="lazy" />
                     <figcaption>Shhh</figcaption>
                     <div class="desc">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Harum, sed ratione enim quo nesciunt saepe voluptatum
-                      exercitationem. Exercitationem, vitae mollitia.
+                      A secure file sharing application.
                     </div>
                   </figure>
                 </div>
@@ -176,12 +164,10 @@
               <a href="https://ferarri-hero-design-by-okay.vercel.app/" target="_blank">
                 <div class="project">
                   <figure>
-                    <img src="assets/ferrari-pro.png" alt="product-image" />
+                    <img src="assets/ferrari-pro.png" alt="product-image" loading="lazy" />
                     <figcaption>Ferrari Website (Freestyle)</figcaption>
                     <div class="desc">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Harum, sed ratione enim quo nesciunt saepe voluptatum
-                      exercitationem. Exercitationem, vitae mollitia.
+                      A concept design for the Ferrari website.
                     </div>
                   </figure>
                 </div>
@@ -203,91 +189,47 @@
         <section id="skills">
           <div class="section-header">
             <h3>Skills</h3>
-            <em>
-              <p class="more" id="popup-skills">More Info</p>
-            </em>
           </div>
 
           <div class="section-content">
             <div class="skills-container">
               <div class="skill">
-                <span class="skill-icon"></span>
+                <span class="skill-icon">WD</span>
                 <div class="info">
                   <h4>Web Development</h4>
                   <p class="tag">Coding</p>
                   <p class="desc">
-                    <ul>
-                      <li>HTML, CSS, JavaScript (ES6+)</li>
-                      <li>React.js</li>
-                      <li>Tailwind CSS, Shadcn</li>
-                      <li>UI Prototyping</li>
-                      <li>Responsive Web Design & Accessibility</li>
-                      <li>Performance Optimization &
-                        Debugging</li>
-                    </ul>
+                    HTML, CSS, JavaScript, React.js, Tailwind CSS, Shadcn, Responsive Design
                   </p>
                 </div>
               </div>
               <div class="skill">
-                <span class="skill-icon"></span>
+                <span class="skill-icon">BE</span>
                 <div class="info">
-                  <h4>Backend & Database (Learning & Usage)</h4>
+                  <h4>Backend & Database</h4>
                   <p class="tag">Coding</p>
                   <p class="desc">
-                    <ul>
-                      <li>Supabase (Authentication Database, and API Integration)</li>
-                      <li>Utilizing frameworks with backend
-                        functionality when needed </li>
-                    </ul>
+                    Supabase, API Integration
                   </p>
                 </div>
               </div>
               <div class="skill">
-                <span class="skill-icon"></span>
+                <span class="skill-icon">GD</span>
                 <div class="info">
-                  <h4>Graphic Design & Branding</h4>
+                  <h4>Graphic Design</h4>
                   <p class="tag">Design</p>
                   <p class="desc">
-                    <ul>
-                      <li>Canva, Figma</li>
-                      <li>Logo & Brand Identity Design </li>
-                    </ul>
+                    Canva, Figma, Logo & Brand Identity Design
                   </p>
                 </div>
               </div>
-
               <div class="skill">
-                <span class="skill-icon"></span>
+                <span class="skill-icon">SM</span>
                 <div class="info">
-                  <h4>Social Media Management</h4>
+                  <h4>Social Media</h4>
                   <p class="tag">Socials</p>
                   <p class="desc">
-                    <ul>
-                      <li>Experience
-                        managing X (Twitter), TikTok, Facebook, and Instagram</li>
-                      <li>Grew a
-                        personal Facebook page to 7,000+ followers and an X (Twitter) account
-                        to 600+ followers </li>
-                    </ul>
-                  </p>
-                </div>
-              </div>
-              <div class="skill">
-                <span class="skill-icon"></span>
-                <div class="info">
-                  <h4>Other Skills</h4>
-                  <!-- <p class="tag">Others</p> -->
-                  <p class="desc">
-                    <ul>
-                      <li>Git & Version Control</li>
-                      <li>Project Management</li>
-                      <li>IT
-                        Troubleshooting & Support</li>
-                      <li>Critical Thinking & Problem-Solving</li>
-                      <li>Idealist & Visionary Thinking</li>
-                      <li>Collaboration &
-                        Leadership</li>
-                    </ul>
+                    Content Creation, Community Management
                   </p>
                 </div>
               </div>
@@ -307,10 +249,7 @@
 
         <section id="contact">
           <div class="section-header">
-            <h3>Contact</h3>
-            <em>
-              <p class="more" id="popup-contact">More Info</p>
-            </em>
+            <h3>Contact Me</h3>
           </div>
 
           <div class="section-content">
@@ -338,12 +277,12 @@
                 <textarea
                   name="message"
                   id="message"
-                  placeholder="Message..."
-                  rows="10"
+                  placeholder="Your message..."
+                  rows="7"
                 ></textarea>
               </div>
 
-              <button type="submit">Send</button>
+              <button type="submit">Send Message</button>
             </form>
           </div>
 
