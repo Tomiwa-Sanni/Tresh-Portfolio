@@ -102,7 +102,7 @@ header nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 5rem;
+  padding: 1rem 2rem;
   box-shadow: 0 1.5px 1px var(--shadow);
   z-index: 1000;
 }
@@ -166,6 +166,18 @@ footer .action a.button {
   padding-left: 1.67rem;
   padding-right: 1.67rem;
   text-transform: uppercase;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--secondary);
+  margin: 5px 0;
 }
 
 header .hero {
@@ -243,7 +255,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 3rem 15rem 1rem;
+  padding: 3rem 2rem 1rem;
 }
 
 .section-header {
@@ -468,6 +480,9 @@ footer p.copy span#year {
 @media (max-width: 768px) {
   nav .links {
     display: none;
+  }
+  .hamburger {
+    display: block;
   }
   header nav {
     padding: 1rem 2rem;
