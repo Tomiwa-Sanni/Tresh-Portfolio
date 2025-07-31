@@ -171,6 +171,7 @@ footer .action a.button {
 header .hero {
   position: relative;
   width: 100%;
+  text-align: center;
 }
 
 .hero .profile {
@@ -409,8 +410,9 @@ form .row label {
   cursor: pointer;
 }
 
-form .row input {
-  width: 50%;
+form .row input,
+form .row textarea {
+  width: 100%;
   height: 4rem;
   border: 1px solid var(--light-tertiary);
   background-color: transparent;
@@ -419,16 +421,7 @@ form .row input {
 }
 
 form .row textarea {
-  width: 50%;
-  border: 1px solid var(--light-tertiary);
-  background-color: transparent;
-  border-radius: 1rem;
-  padding: 1.25rem;
-}
-
-form button {
-  padding-left: 2rem;
-  padding-right: 2rem;
+    padding: 1.25rem;
 }
 
 footer {
@@ -469,81 +462,7 @@ footer p.copy span#year {
 }
 
 .popup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-}
-
-.popup .popup-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  background-color: var(--primary);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.popup .popup-container .remove-popup {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: var(--light-tertiary);
-  transition: background-color 0.3s ease;
-}
-
-.popup .popup-container .remove-popup:hover {
-    background-color: var(--tertiary);
-}
-
-.popup .popup-container .remove-popup svg {
-  width: 20px;
-  height: 20px;
-  color: var(--secondary);
-}
-
-
-.popup .popup-container .popup-content {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-.popup .popup-container .popup-content h5 {
-  font-size: 2.25rem;
-  align-self: center;
-  margin-bottom: 1rem;
-}
-
-.popup .popup-container .popup-content .content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-.popup .popup-container .popup-content .content h6 {
-  font-size: 2rem;
-  color: var(--secondary);
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -555,6 +474,10 @@ footer p.copy span#year {
   }
   section {
     padding: 3rem 2rem 1rem;
+  }
+  form .row input,
+  form .row textarea {
+    width: 100%;
   }
 }
 
