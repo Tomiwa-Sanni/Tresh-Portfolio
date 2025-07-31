@@ -3,17 +3,19 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--secondary);
+  line-height: 1.5;
 }
 
 :root {
-  font-size: 12px;
+  font-size: 14px;
   --primary: white;
   --secondary: black;
   --tertiary: rgba(0, 0, 0, 0.8);
   --light-tertiary: rgba(0, 0, 0, 0.25);
-  --blue: green;
-  --shadow-blue: rgba(0, 128, 0, 0.4);
+  --blue: #007bff;
+  --shadow-blue: rgba(0, 123, 255, 0.4);
   --shadow: rgba(0, 0, 0, 0.05);
+  --body-bg: #f8f9fa;
 }
 
 body.dark {
@@ -22,10 +24,12 @@ body.dark {
   --tertiary: rgba(255, 255, 255, 0.9);
   --light-tertiary: rgba(255, 255, 255, 0.25);
   --shadow: rgba(255, 255, 255, 0.05);
+  --body-bg: #121212;
 }
 
 body {
-  background-color: var(--primary);
+  background-color: var(--body-bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 h1,
@@ -34,21 +38,26 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
 }
 
 p,
 button {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 500;
   font-size: 1rem;
 }
 
 a {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--blue);
 }
 
 a.button,
@@ -60,6 +69,13 @@ button {
   border: none;
   box-shadow: none;
   outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+a.button:hover,
+button:hover {
+  box-shadow: 0 0 10px var(--shadow-blue);
+  color: var(--primary);
 }
 
 mark {
@@ -87,6 +103,7 @@ span.mode {
   min-width: 100px;
   min-height: 100vh;
   margin: auto;
+  background-color: var(--primary);
 }
 
 header {
@@ -102,9 +119,10 @@ header nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 5rem;
+  padding: 1rem 2rem;
   box-shadow: 0 1.5px 1px var(--shadow);
   z-index: 1000;
+  background-color: var(--primary);
 }
 
 nav span.logo {
@@ -127,31 +145,7 @@ nav .links .link-container {
 
 .link-container a {
   position: relative;
-  transition: 1s;
   text-transform: uppercase;
-}
-
-.link-container a::before {
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: var(--blue);
-}
-
-.link-container a:hover::before {
-  animation: link 0.5s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes link {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
 }
 
 nav .links .left,
@@ -230,6 +224,7 @@ svg path {
 .hero .profile p.desc {
   font-size: 1.2rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .section-container {
@@ -242,7 +237,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 3rem 15rem 1rem;
+  padding: 3rem 2rem 1rem;
 }
 
 .section-header {
@@ -273,7 +268,7 @@ p.more {
 }
 
 .section-content p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .section-content button.button {
@@ -284,18 +279,20 @@ p.more {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-around;
-  padding: 2rem;
+  justify-content: center;
+  padding: 2rem 0;
   gap: 1.5rem;
 }
 
 .project-container .project {
   position: relative;
-  width: 29.167rem;
+  width: 100%;
+  max-width: 29.167rem;
   box-shadow: 3px 3px 10px var(--shadow);
   padding: 1rem;
   transition: 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-  background-color: rgba(0, 0, 0, 0.01);;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
 }
 
 .project-container .project:hover {
@@ -314,19 +311,18 @@ p.more {
   width: 100%;
   height: 16.67rem;
   border: 1px dashed rgba(0, 0, 0, 0.05);
+  border-radius: 0.25rem;
 }
 
 .project-container .project figure figcaption {
   color: var(--secondary);
   font-size: 1.25rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
 }
 
 .project-container .project figure .desc {
   color: var(--tertiary);
   font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
 }
 
@@ -334,8 +330,8 @@ p.more {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-around;
-  padding: 2rem;
+  justify-content: center;
+  padding: 2rem 0;
   gap: 1.5rem;
 }
 
@@ -345,16 +341,18 @@ p.more {
   align-items: flex-start;
   gap: 1.25rem;
   position: relative;
-  width: 29.167rem;
-  border: 1px solid var(--secondary);
+  width: 100%;
+  max-width: 29.167rem;
+  border: 1px solid var(--light-tertiary);
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 0 10px var(--shadow-blue);
+  box-shadow: 0 0 10px var(--shadow);
   transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.575);
 }
 
 .skill:hover {
   scale: 1.1;
+  border-color: var(--blue);
 }
 
 .skill .skill-icon {
@@ -375,7 +373,6 @@ p.more {
 .skill h4 {
   color: var(--secondary);
   font-size: 1.25rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
 }
 
@@ -409,12 +406,11 @@ form .row {
 
 form .row label {
   font-size: 1.2rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   cursor: pointer;
 }
 
 form .row input {
-  width: 50%;
+  width: 100%;
   height: 4rem;
   border: 1px solid var(--light-tertiary);
   background-color: transparent;
@@ -423,7 +419,7 @@ form .row input {
 }
 
 form .row textarea {
-  width: 50%;
+  width: 100%;
   border: 1px solid var(--light-tertiary);
   background-color: transparent;
   border-radius: 1rem;
@@ -444,6 +440,8 @@ footer {
   width: 100%;
   gap: 2rem;
   margin-bottom: 1rem;
+  padding: 2rem;
+  background-color: var(--primary);
 }
 
 footer .links {
@@ -455,9 +453,11 @@ footer .links {
 
 footer .links .link-container {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
+  gap: 1rem;
 }
 
 footer .links .link-container a {
@@ -482,20 +482,21 @@ footer p.copy span#year {
   width: 100%;
   height: 100vh;
   z-index: 999;
-  background-color: transparent;
-  backdrop-filter: blur(15px);
-  padding: 7.5rem 5rem;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  padding: 2rem;
 }
 
 .popup .popup-container {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 90vh;
   background-color: var(--primary);
   border: 0.5px dashed var(--light-tertiary);
   border-radius: 2.5rem;
   padding: 2rem;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .popup .popup-container .remove-popup {
@@ -507,7 +508,6 @@ footer p.copy span#year {
 
 .popup .popup-container .remove-popup span {
   font-size: 2rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .popup .popup-container .popup-content {
@@ -538,12 +538,94 @@ footer p.copy span#year {
   padding: 2rem;
 }
 
-@media (max-width: 768px) {
-  nav .links {
-    display: none;
-  }
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--secondary);
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 1.5px 1px var(--shadow);
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.mobile-nav.active {
+  display: flex;
+  transform: translateX(0);
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .none {
   display: none;
+}
+
+@media (min-width: 769px) {
+  .container {
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+  section {
+    padding: 3rem 15rem 1rem;
+  }
+  header nav {
+    padding: 1rem 5rem;
+  }
+  .project-container, .skills-container {
+    justify-content: space-around;
+    padding: 2rem;
+  }
+  .project-container .project, .skill {
+    width: 29.167rem;
+  }
+  form .row input, form .row textarea {
+    width: 50%;
+  }
+  footer .links .link-container {
+    width: 70%;
+    flex-wrap: nowrap;
+  }
+  .popup {
+    padding: 7.5rem 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
 }

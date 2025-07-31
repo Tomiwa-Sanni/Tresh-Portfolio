@@ -2,6 +2,8 @@ let modeToggle = document.querySelectorAll(".mode");
 let showYear = document.getElementById("year");
 let removePopup = document.querySelectorAll(".hide-popup");
 let popups = document.querySelectorAll(".popup");
+const hamburger = document.querySelector(".hamburger");
+const mobileNav = document.querySelector(".mobile-nav");
 
 window.onload = () => {
   let date = new Date();
@@ -18,6 +20,11 @@ modeToggle.forEach((e) => {
 function showPopup(popupName) {
   popupName.classList.toggle("none");
 }
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileNav.classList.toggle("active");
+});
 
 // Button and Popups name
 let aboutPopupButton = document.getElementById("popup-about");
